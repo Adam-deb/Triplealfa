@@ -1,0 +1,12 @@
+.hero{
+    background-image: url(/mediaHero.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
