@@ -87,7 +87,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className={styles.rightMenu}>
-            <a href="tel:">
+            <a href="tel:912267004893">
               <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon"/>
               Contact us
             </a>
