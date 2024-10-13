@@ -1,0 +1,24 @@
+.footer{
+    background-color: black;
+    color: white;
+}
+
+.footerTextContainer{
+    padding: 50px;
+}
+
+.footerTextContainer p{
+    margin-top: 20px;
+}
+
+@media (max-width:670px){
+    .footerTextContainer p, .footerTextContainer h2{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:520px){
+    .footerTextContainer{
+        padding: 50px 10px
+    }
+}

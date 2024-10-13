@@ -166,8 +166,9 @@
 }
 
 .rightMenu{
-    background-color: white;
+    background-color: transparent;
     border-radius: 10px;
+    border: 2px solid white
 }
 
 .rightMenu a{
@@ -175,7 +176,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 10px;
-    color:black
+    color:white
 }
 
 .rightMenu img {
@@ -183,7 +184,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 650px) {
+@media (max-width: 840px) {
     .logoNavContainer {
         display: flex;
         align-items: center;

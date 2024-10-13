@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 
@@ -33,12 +34,13 @@ export default function Home() {
           <div className={styles.asset}>
             <Image src="/media.jpeg" width={340} height={272}/>
             <h3>Media Fund Investment</h3>
-            <p>Media fund investments provide a unique opportunity to tap into the explosive growth of the film, OTT, and digital media industries. Triple Alfa partners with NV Capital to offer structured financing solutions for media projects, ensuring secure, high-return investments.</p>
+            <p>Media fund investments provide a unique opportunity to tap into the explosive growth of the film, OTT, and digital media industries. Triple Alfa acts as an introducer to NV Capital, connecting you with their structured financing solutions for media projects, designed to offer secure, high-return investments.</p>
             <Link href="/media-fund-investment">Find out more</Link>
           </div>
         </div>
       </section>
     </main>
+    <Footer/>
     </>
   );
 }
