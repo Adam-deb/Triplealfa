@@ -1,0 +1,113 @@
+.hero {
+  background-image: url(/teamHero.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.heroText h1 {
+  font-size: 36px;
+  color: white;
+  padding: 30px;
+  text-align: left;
+}
+
+.ourTeam {
+  padding: 50px 20px; 
+  background-color: rgba(240, 240, 240, 0.432);
+}
+
+.teamMemberContainer {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.teamMember {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  align-items: center;
+}
+
+.teamMemberImage {
+  flex: 1 1 100%; 
+  display: flex;
+  justify-content: center; 
+}
+
+.teamMemberImage img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+.teamMemberInfo {
+  flex: 1 1 100%; 
+  text-align: left;
+}
+
+.teamMemberInfo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.teamMemberInfo h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.teamMemberInfo p {
+  font-size: 16px; 
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .teamMember {
+      flex-wrap: nowrap; 
+  }
+
+  .teamMemberImage {
+      flex: 0 0 350px; 
+  }
+
+  .teamMemberInfo {
+      flex: 1;
+  }
+
+  #imageLeft {
+      margin-left: 50px;
+  }
+
+  #imageRight {
+      margin-right: 50px;
+  }
+
+  .teamMemberContainer{
+    margin-bottom: 0;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroText h1 {
+      font-size: 48px; 
+  }
+
+  .teamMemberInfo h2 {
+      font-size: 32px;
+  }
+
+  .teamMemberInfo h3 {
+      font-size: 20px;
+  }
+
+  .teamMemberInfo p {
+      font-size: 18px;
+  }
+}

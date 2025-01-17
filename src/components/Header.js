@@ -8,11 +8,6 @@ import styles from "./Header.module.css";
 // Define navigation data
 const navigationData = [
   {
-    title: 'Home',
-    href: '/', 
-    subItems: []
-  },
-  {
     title: 'Whiskey Cask Investment',
     href: '/whiskey-cask-investment', 
     subItems: []
@@ -22,6 +17,11 @@ const navigationData = [
     href: '/media-fund-investment', 
     subItems: []
   },
+  {
+    title: 'Our Team',
+    href: '/our-team', 
+    subItems: []
+  }
 ];
 
 export default function Header() {
@@ -87,7 +87,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className={styles.rightMenu}>
-            <a href="tel:912267004893">
+            <a href="tel:">
               <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon"/>
               Contact us
             </a>
