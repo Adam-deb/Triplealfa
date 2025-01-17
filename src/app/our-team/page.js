@@ -16,7 +16,7 @@ export default function OurTeam() {
                 <section className={styles.ourTeam}>
                     <div className={styles.teamMemberContainer}>
                         <div className={styles.teamMember}>
-                            <div className={styles.teamMemberImage}>
+                            <div className={styles.teamMemberImage} >
                                 <Image src="/ceo.png" height={400} width={350}/>
                             </div>
                             <div className={styles.teamMemberInfo} id={styles.imageLeft}>
@@ -33,7 +33,7 @@ export default function OurTeam() {
                                 <h3>Chief Technical Officer</h3>
                                 <p>Adam brings a blend of technology leadership and strategic expertise to Triple Alfa. With experience leading product development and enhancing customer-focused solutions, he has a proven track record of driving innovation and collaboration. His background in financial analysis and technology equips him to deliver impactful solutions, redefining alternative investments with a forward-thinking approach.</p>
                             </div>
-                            <div className={styles.teamMemberImage}>
+                            <div className={styles.teamMemberImage} id={styles.ctoImage}>
                                 <Image src="/cto.png" height={400} width={350}/>
                             </div>
                         </div>

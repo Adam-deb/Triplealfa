@@ -38,7 +38,11 @@
 .teamMemberImage {
   flex: 1 1 100%; 
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+}
+
+#ctoImage{
+  order: -1;
 }
 
 .teamMemberImage img {
@@ -92,13 +96,13 @@
     margin-bottom: 0;
     padding: 0 50px;
   }
+
+  #ctoImage{
+    order: 1;
+  }
 }
 
 @media (min-width: 1024px) {
-  .heroText h1 {
-      font-size: 48px; 
-  }
-
   .teamMemberInfo h2 {
       font-size: 32px;
   }
@@ -109,5 +113,9 @@
 
   .teamMemberInfo p {
       font-size: 18px;
+  }
+
+  #ctoImage{
+    order: 1;
   }
 }
