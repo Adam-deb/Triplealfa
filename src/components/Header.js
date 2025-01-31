@@ -17,11 +17,11 @@ const navigationData = [
     href: '/media-fund-investment', 
     subItems: []
   },
-  {
-    title: 'Our Team',
-    href: '/our-team', 
-    subItems: []
-  }
+  // {
+  //   title: 'Our Team',
+  //   href: '/our-team', 
+  //   subItems: []
+  // }
 ];
 
 export default function Header() {
