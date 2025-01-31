@@ -7,7 +7,7 @@ export default function OurTeam() {
     return (
         <>
             <Header />
-            <main>
+            {/* <main>
                 <section className={styles.hero}>
                     <div className={styles.heroText}>
                         <h1> Meet Our Team</h1>
@@ -39,7 +39,7 @@ export default function OurTeam() {
                         </div>
                     </div>
                 </section>
-            </main>
+            </main> */}
             <Footer/>
         </>
     )
