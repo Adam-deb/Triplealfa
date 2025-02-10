@@ -55,7 +55,7 @@ export default function WhiskeyInvestment() {
                     </div>
                     <aside className={styles.imagesSection}>
                         <div className={styles.imagesContainer}>
-                            {/* Add Images */}
+                         
                         </div>
                     </aside>
                 </section>

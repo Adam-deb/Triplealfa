@@ -8,8 +8,8 @@ import styles from "./Header.module.css";
 // Define navigation data
 const navigationData = [
   {
-    title: 'Whiskey Cask Investment',
-    href: '/whiskey-cask-investment', 
+    title: 'Whisky Cask Investment',
+    href: '/whisky-cask-investment', 
     subItems: []
   },
   {
@@ -17,11 +17,11 @@ const navigationData = [
     href: '/media-fund-investment', 
     subItems: []
   },
-  // {
-  //   title: 'Our Team',
-  //   href: '/our-team', 
-  //   subItems: []
-  // }
+  {
+    title: 'Our Team',
+    href: '/our-team', 
+    subItems: []
+  }
 ];
 
 export default function Header() {

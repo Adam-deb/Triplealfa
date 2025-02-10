@@ -7,7 +7,7 @@ export default function OurTeam() {
     return (
         <>
             <Header />
-            {/* <main>
+            <main>
                 <section className={styles.hero}>
                     <div className={styles.heroText}>
                         <h1> Meet Our Team</h1>
@@ -38,8 +38,20 @@ export default function OurTeam() {
                             </div>
                         </div>
                     </div>
+                    <div className={styles.teamMemberContainer}>
+                        <div className={styles.teamMember}>
+                            <div className={styles.teamMemberImage}>
+                                <Image src="/cco.png" height={400} width={350}/>
+                            </div>
+                            <div className={styles.teamMemberInfo} id={styles.imageLeft}>
+                                <h2>Samar Rege</h2>
+                                <h3>Chief Commercial Officer</h3>
+                                <p>Samar Rege is an unregistered barrister in England and Wales, and lawyer from India.</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-            </main> */}
+            </main>
             <Footer/>
         </>
     )
