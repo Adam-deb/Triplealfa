@@ -46,7 +46,7 @@ export default function OurTeam() {
                             <div className={styles.teamMemberInfo} id={styles.imageLeft}>
                                 <h2>Samar Rege</h2>
                                 <h3>Chief Commercial Officer</h3>
-                                <p>Samar Rege is an unregistered barrister in England and Wales, and lawyer from India.</p>
+                                <p>Samar is an unregistered Barrister at the England and Wales Bar and a lawyer in India. With an LLM in Climate Change Litigation and International Investment Law, Samar brings experience and expertise in public law and commercial law to the organisation.</p>
                             </div>
                         </div>
                     </div>
