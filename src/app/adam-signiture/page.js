@@ -7,7 +7,7 @@ export default function Signature1() {
       cellSpacing="0"
       cellPadding="0"
       border="0"
-      style={{ maxWidth: '600px', fontFamily: 'Arial, sans-serif' }}
+      style={{ maxWidth: '600px', fontFamily: 'MontserratRegular' }}
     >
       <tbody>
         <tr>
@@ -33,7 +33,7 @@ export default function Signature1() {
                         height={45}
                       />
                     </div>
-                    <p style={{ margin: 0, fontSize: '22px', fontWeight: 'bold', color: '#333' }}>
+                    <p style={{ margin: 0, fontSize: '22px', fontWeight: 'bold', color: '#333', fontFamily: 'MontserratRegular' }}>
                       Adam Debski
                     </p>
                     <p
@@ -43,11 +43,12 @@ export default function Signature1() {
                         color: '#333',
                         borderBottom: '1px solid #333',
                         paddingBottom: '10px',
+                        fontFamily: 'MontserratRegular'
                       }}
                     >
                       Chief Technical Officer | Triple Alfa
                     </p>
-                    <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555' }}>
+                    <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555', fontFamily: 'MontserratRegular' }}>
                       <a href="tel:+447860121271" style={{ color: 'black', textDecoration: 'none' }}>
                         <span style={{ fontWeight: 'bold' }}>M:</span> +44 7860 121271
                       </a>{' '}
@@ -56,7 +57,7 @@ export default function Signature1() {
                       <span style={{ fontWeight: 'bold' }}>E:</span> adam@triplealfa.com
                       </a>
                     </p>
-                    <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555' }}>
+                    <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555', fontFamily: 'MontserratRegular' }}>
                       <a href="https://triplealfa.com" style={{ color: 'black', textDecoration: 'none' }}>
                         <span style={{ fontWeight: 'bold' }}>W:</span> triplealfa.com
                       </a>
