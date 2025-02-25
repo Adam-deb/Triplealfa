@@ -40,7 +40,7 @@ export default function Signature1() {
                               alt="Triple Alfa logo"
                               width="75"
                               height="45"
-                              style={{ display: 'block', maxWidth: '75px', height: 'auto' }}
+                              style={{ maxWidth: '75px', height: 'auto' }}
                             />
                           </td>
                         </tr>
@@ -54,7 +54,7 @@ export default function Signature1() {
                         <strong>E:</strong> adam@triplealfa.com
                       </a>
                     </p>
-                    <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555' }}>
+                    <p style={{ margin: '0', fontSize: '14px', color: '#555' }}>
                       <a href="https://triplealfa.com" style={{ color: 'black', textDecoration: 'none' }}>
                         <strong>W:</strong> triplealfa.com
                       </a>
