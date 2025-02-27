@@ -12,7 +12,8 @@ export default function Home() {
     <main>
       <section className={styles.hero}>
         <div className={styles.heroText}>
-          <h1>Invest Beyond the Ordinary</h1>
+          <h1>Triple Alfa</h1>
+          <p>Invest Beyond the Ordinary</p>
           <p>Discover high-growth opportunities in exclusive alternative assets.</p>
         </div>
       </section>
