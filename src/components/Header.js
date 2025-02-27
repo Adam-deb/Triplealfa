@@ -8,13 +8,13 @@ import styles from "./Header.module.css";
 // Define navigation data
 const navigationData = [
   {
-    title: 'Whisky Cask Investment',
-    href: '/whisky-cask-investment', 
+    title: 'Indian Investors',
+    href: '/indian-investors', 
     subItems: []
   },
   {
-    title: 'Media Fund Investment',
-    href: '/media-fund-investment', 
+    title: 'Global Investors',
+    href: '/global-investors', 
     subItems: []
   },
   {
@@ -87,7 +87,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className={styles.rightMenu}>
-            <a href="tel:">
+            <a href="mailto:sanika@triplealfa.com">
               <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon"/>
               Contact us
             </a>

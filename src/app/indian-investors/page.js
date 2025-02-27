@@ -51,7 +51,7 @@ export default function WhiskeyInvestment() {
                                 As the appreciation of rare whiskies becomes more mainstream, investing in whisky casks offers an opportunity to be part of this exciting landscape.
                             </p>
                             <p className={styles.description}>
-                                At Triple Alfa, we partner with Speyside Capital to provide access to exclusive cask investment opportunities, ensuring that our clients can confidently navigate this unique market.
+                                At Triple Alfa, we partner with whisky cask managers to provide access to exclusive cask investment opportunities, ensuring that our clients can confidently navigate this unique market.
                             </p>
                         </div>
                     </div>
@@ -59,10 +59,6 @@ export default function WhiskeyInvestment() {
                     {/* Right images section */}
                     <aside className={styles.imagesSection}>
                         <div className={styles.imagesContainer}>
-                            <Image src="/eventImage1.jpg" width={600} height={200}  />
-                            <Image src="/eventImage3.jpg" width={600} height={200}  />
-                            <Image src="/eventImage2.jpg" width={600} height={200}  />
-                            <Image src="/eventImage4.jpg" width={600} height={200} />
                         </div>
                     </aside>
                 </section>

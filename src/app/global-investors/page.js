@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function WhiskeyInvestment() {
+export default function GlobalInvestors() {
     return (
         <>
             <Header />
@@ -49,7 +49,7 @@ export default function WhiskeyInvestment() {
                                 As the appetite for quality content grows, media fund investing presents an opportunity to capitalize on this momentum.
                             </p>
                             <p className={styles.description}>
-                            Triple Alfa acts as an introducer to NV Capital, connecting you with their structured financing solutions for media projects.
+                            Triple Alfa acts as an introducer to media funds, connecting you with their structured financing solutions for media projects.
                             </p>
                         </div>
                     </div>
