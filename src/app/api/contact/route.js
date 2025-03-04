@@ -21,6 +21,10 @@ export async function POST(req) {
       `
     );
 
+    console.log("TENANT_ID:", process.env.TENANT_ID);
+    console.log("CLIENT_ID:", process.env.CLIENT_ID);
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+
     return new Response(JSON.stringify({ message: "Email sent successfully" }), {
       status: 200,
     });
