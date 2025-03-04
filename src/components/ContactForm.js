@@ -76,7 +76,7 @@ export default function ContactForm() {
       urlEncodedData.append("_template", "table");
       urlEncodedData.append("_subject", "New Contact Form Submission");
 
-      const response = await fetch("https://formsubmit.co/adam@triplealfa.com", {
+      const response = await fetch("https://formsubmit.co/a8e14abcee5a585352311df51100617b", {
         method: "POST",
         body: urlEncodedData.toString(),
       });
