@@ -87,10 +87,10 @@ export default function Header() {
             </ul>
           </nav>
           <div className={styles.rightMenu}>
-            <a href="mailto:sanika@triplealfa.com">
+            <Link href="/contact-us">
               <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon"/>
               Contact us
-            </a>
+            </Link>
           </div>
           <button className={styles.menuToggle} aria-label="Toggle navigation" onClick={toggleMenu}>
             <span className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}></span>
