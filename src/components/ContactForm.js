@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import PhoneInput from "react-phone-number-input";
@@ -7,7 +7,7 @@ import { isValidPhoneNumber, parsePhoneNumber } from "react-phone-number-input";
 import metadata from "libphonenumber-js/metadata.full.json";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", _honey: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", website: "" });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -44,7 +44,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData._honey) {
+    if (formData.website) {
       console.warn("Bot detected!");
       return;
     }
@@ -67,30 +67,22 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      const urlEncodedData = new URLSearchParams();
-      for (let key in formData) {
-        urlEncodedData.append(key, formData[key]);
-      }
-
-      urlEncodedData.append("_captcha", "false");
-      urlEncodedData.append("_template", "table");
-      urlEncodedData.append("_subject", "New Contact Form Submission");
-
-      const response = await fetch("https://formsubmit.co/a8e14abcee5a585352311df51100617b", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: urlEncodedData.toString(),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully!");
         setSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", message: "", _honey: "" });
+        setFormData({ name: "", email: "", phone: "", message: "", website: "" });
       } else {
-        console.error("Form submission failed");
         setError("Something went wrong. Please try again.");
       }
     } catch (err) {
-      console.error("Form submission error:", err);
+      console.error("Form submission failed", err);
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -107,20 +99,6 @@ export default function ContactForm() {
   return (
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
-        {/* Honeypot Field (hidden to prevent bots) */}
-        <input
-          type="text"
-          name="_honey"
-          style={{ display: "none" }}
-          value={formData._honey}
-          onChange={handleChange}
-        />
-
-        {/* Hidden Fields for FormSubmit */}
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_subject" value="New Contact Form Submission" />
-
         <label className={styles.label}>Name</label>
         <input
           type="text"
@@ -162,9 +140,21 @@ export default function ContactForm() {
           className={styles.textarea}
         />
 
+        <input
+          type="text"
+          name="website"
+          value={formData.website}
+          onChange={handleChange}
+          className={styles.hidden}
+        />
+
         {error && <p className={styles.error}>{error}</p>}
 
-        <button type="submit" disabled={loading} className={styles.button}>
+        <button
+          type="submit"
+          disabled={loading}
+          className={styles.button}
+        >
           {loading ? "Submitting..." : "Send Message"}
         </button>
       </form>
