@@ -1,6 +1,14 @@
 import { sendEmail } from "@/utils/email.js";
 
 export async function POST(req) {
+
+  console.log("API Route Hit");
+
+  console.log("TENANT_ID:", process.env.TENANT_ID);
+  console.log("CLIENT_ID:", process.env.CLIENT_ID);
+  console.log("EMAIL_USER:", process.env.EMAIL_USER);
+  console.log("NODE_ENV:", process.env.NODE_ENV);
+  
   try {
     const { name, email, phone, message } = await req.json();
 
