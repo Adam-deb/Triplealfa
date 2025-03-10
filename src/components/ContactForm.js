@@ -127,7 +127,7 @@ export default function ContactForm() {
           defaultCountry={country}
           international
           limitMaxLength={true}
-          className={styles.input}
+          className={styles.PhoneInput}
         />
 
         <label className={styles.label}>Message</label>

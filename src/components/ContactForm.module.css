@@ -62,3 +62,20 @@
     cursor: pointer;
   }
   
+  .PhoneInput {
+    width: 100%; /* Make PhoneInput fill container width */
+    border: 1px solid #ccc; /* Apply consistent border */
+    border-radius: 5px; /* Match your other inputs */
+    display: flex; /* Align flag and input */
+    padding: 0; /* Reset padding */
+  }
+  
+  .PhoneInputInput {
+    border: none !important; /* Remove inner border */
+    outline: none !important; /* Remove outline */
+    width: 100%; /* Full width for the input */
+    padding: 10px; /* Add padding like other inputs */
+    font-family: inherit; /* Inherit font */
+    border-radius: 5px; /* Ensure consistent rounded corners */
+    background: transparent; /* Optional, for a seamless look */
+  }
