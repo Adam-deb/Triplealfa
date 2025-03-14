@@ -16,7 +16,7 @@ export default function Signature1() {
                 <tr>
                   <td width="100" style={{ paddingRight: '10px', verticalAlign: 'middle' }}>
                     <img
-                      src="/email-signitures/headshots/Fahad.png"
+                      src="/email-signitures/headshots/Adam.png"
                       alt="headshot"
                       width="100"
                       height="100"
@@ -29,10 +29,10 @@ export default function Signature1() {
                         <tr>
                           <td style={{ textAlign: 'left', verticalAlign: 'middle' }}>
                             <p style={{ margin: '0', fontSize: '20px', fontWeight: 'bold', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-                              Fahad Haris
+                              Adam Debski
                             </p>
                             <p style={{ margin: '2px 0 0 0', fontSize: '14px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-                              Overseas Investment Manager | Triple Alfa
+                              Chief Technical Officer | Triple Alfa
                             </p>
                           </td>
                           <td style={{ textAlign: 'right', verticalAlign: 'middle' }}>
@@ -49,15 +49,15 @@ export default function Signature1() {
                     </table>
                     <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555' }}>
                       <a href="tel:+447860121271" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
-                        <strong>M:</strong> +44 7468 543618
+                        <strong style={{fontFamily: 'Arial, sans-serif'}}>M:</strong> +44 7860 121271
                       </a><br />
                       <a href="mailto:adam@triplealfa.com" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
-                        <strong>E:</strong> fahad.haris@triplealfa.com
+                        <strong style={{fontFamily: 'Arial, sans-serif'}}>E:</strong> adam@triplealfa.com
                       </a>
                     </p>
                     <p style={{ margin: '0', fontSize: '14px', color: '#555' }}>
                       <a href="https://triplealfa.com" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
-                        <strong>W:</strong> triplealfa.com
+                        <strong style={{fontFamily: 'Arial, sans-serif'}}>W:</strong> triplealfa.com
                       </a>
                     </p>
                   </td>
@@ -69,7 +69,7 @@ export default function Signature1() {
       </tbody>
     </table>
           {/* Separate section for company contact details and social media icons */}
-          <div
+      <div
         style={{
           maxWidth: '600px',
           fontFamily: 'Arial, sans-serif',

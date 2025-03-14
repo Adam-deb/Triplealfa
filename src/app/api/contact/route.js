@@ -19,7 +19,7 @@ export async function POST(req) {
     }
 
     await sendEmail(
-      "adam@triplealfa.com",
+      ["adam@triplealfa.com", "info@triplealfa.com"],
       "New Contact Form Submission",
       `
       Name: ${name}
