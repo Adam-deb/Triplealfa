@@ -154,7 +154,7 @@ export default function Signature1() {
               {/* Social media icons on the right */}
               <td style={{ textAlign: 'right', verticalAlign: 'middle' }}>
                 <a href="https://www.linkedin.com/company/triple-alfa/" style={{ marginRight: '10px' }}>
-                  <img src="/icons/linkedin.png" alt="LinkedIn" width="20" height="20" />
+                  <img src="/icons/linkedIn.png" alt="LinkedIn" width="20" height="20" />
                 </a>
                 <a href="https://www.instagram.com/triplealfa_uk/" style={{ marginRight: '10px' }}>
                   <img src="/icons/instagram.png" alt="Instagram" width="20" height="20" />
