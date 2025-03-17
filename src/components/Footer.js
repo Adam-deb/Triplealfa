@@ -7,7 +7,7 @@ export default function Header() {
         <footer className={styles.footer}>
             <div className={styles.footerMain}>
                 <div className={styles.footerLogo}>
-                    <Image src='/Triple_Alfa_Logo_WithText.png' height={75} width={150}/>
+                    <Image src='/Triple_Alfa_Logo_WithText.png' height={90} width={180}/>
                     <div className={styles.socialMediaIcons}>
                         <a href="https://www.linkedin.com/company/triple-alfa/">
                             <img src="/icons/linkedIn-white.png" alt="LinkedIn"/>
@@ -26,6 +26,7 @@ export default function Header() {
                 <div className={styles.links}>
                     <Link href='/'>Home</Link>
                     <Link href='/contact-us'>Contact Us</Link>
+                    <Link href='/our-team'>Our Team</Link>
                     <Link href='/indian-investors'>Indian Investors</Link>
                     <Link href='/global-investors'>Global Investors</Link>
                 </div>

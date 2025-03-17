@@ -50,6 +50,30 @@ export default function OurTeam() {
                             </div>
                         </div>
                     </div>
+                    {/* <div className={styles.teamMemberContainer}>
+                        <div className={styles.teamMember}>
+                            <div className={styles.teamMemberInfo} id={styles.imageRight}>
+                                <h2>Fahad Haris</h2>
+                                <h3>Overseas Investment Manager</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada facilisis mattis. Sed at lacus non orci gravida tincidunt. Sed pulvinar pellentesque ex at bibendum. Fusce varius quis est gravida iaculis. Fusce laoreet non erat at posuere. Morbi ligula nulla, vehicula vitae nisi at, vehicula efficitur odio. Pellentesque vitae dui fermentum, malesuada sapien et, fringilla mauris.</p>
+                            </div>
+                            <div className={styles.teamMemberImage}>
+                                <Image src="/fahad.png" height={400} width={350}/>
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className={styles.teamMemberContainer}>
+                        <div className={styles.teamMember}>
+                            <div className={styles.teamMemberInfo} id={styles.imageRight}>
+                                <h2>Poushali Majumder</h2>
+                                <h3>Overseas Investment Manager</h3>
+                                <p>Poushali brings a strong analytical mindset and a strategic approach to global investments. With a background in cyber security and expertise in risk assessment and compliance, she navigates complex markets to identify and optimise overseas investment opportunities while working closely with clients to achieve their investment goals.</p>
+                            </div>
+                            <div className={styles.teamMemberImage}>
+                                <Image src="/poushali.png" height={400} width={350}/>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <Footer/>
