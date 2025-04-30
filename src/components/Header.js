@@ -2,48 +2,21 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./Header.module.css";
 
-// Define navigation data
 const navigationData = [
-  {
-    title: 'Indian Investors',
-    href: '/indian-investors', 
-    subItems: []
-  },
-  {
-    title: 'Global Investors',
-    href: '/global-investors', 
-    subItems: []
-  },
-  {
-    title: 'Our Team',
-    href: '/our-team', 
-    subItems: []
-  }
+  { title: 'Indian Investors', href: '/indian-investors' },
+  { title: 'Global Investors', href: '/global-investors' },
+  { title: 'Our Team', href: '/our-team' }
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeNavItem, setActiveNavItem] = useState(null);
   const [isMobileView, setIsMobileView] = useState(false);
-  const navRef = useRef();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (
-      (navRef.current && !navRef.current.contains(event.target)) 
-    ) {
-      setActiveNavItem(null);
-    }
-  };
-
-  const handleSubItemClick = () => {
-    setActiveNavItem(null); 
   };
 
   useEffect(() => {
@@ -53,12 +26,7 @@ export default function Header() {
 
     updateView();
     window.addEventListener('resize', updateView);
-
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-      window.removeEventListener('resize', updateView);
-    };
+    return () => window.removeEventListener('resize', updateView);
   }, []);
 
   return (
@@ -70,25 +38,20 @@ export default function Header() {
               <Image height="40" width="80" className={styles.logoImage} src="/headerLogo.png" alt="Triplealfa Logo" />
             </Link>
           </div>
-          <nav ref={navRef} className={`${styles.navbar} ${menuOpen ? styles.navOpen : ''}`}>
+          <nav className={`${styles.navbar} ${menuOpen ? styles.navOpen : ''}`}>
             <ul>
               {navigationData.map((navItem, index) => (
-                <NavItem
-                  key={index}
-                  title={navItem.title}
-                  href={navItem.href}
-                  activeNavItem={activeNavItem}
-                  setActiveNavItem={setActiveNavItem}
-                  subItems={navItem.subItems}
-                  handleSubItemClick={handleSubItemClick}
-                  isMobileView={isMobileView}
-                />
+                <li key={index} className={styles.navItem}>
+                  <Link className={styles.mainNavItem} href={navItem.href}>
+                    {navItem.title}
+                  </Link>
+                </li>
               ))}
             </ul>
           </nav>
           <div className={styles.rightMenu}>
             <Link href="/contact-us">
-              <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon"/>
+              <Image src="/phoneIcon.png" width={20} height={20} alt="Phone Icon" />
               Contact us
             </Link>
           </div>
@@ -96,51 +59,7 @@ export default function Header() {
             <span className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}></span>
           </button>
         </div>
-        </div>
-    </header>
-  );
-}
-
-function NavItem({ title, href, activeNavItem, setActiveNavItem, subItems, handleSubItemClick, isMobileView }) {
-  const handleMouseEnter = () => {
-    if (!isMobileView) {
-      setActiveNavItem(title.toLowerCase());
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isMobileView) {
-      setActiveNavItem(null);
-    }
-  };
-
-  const handleClick = () => {
-    if (isMobileView) {
-      setActiveNavItem(activeNavItem === title.toLowerCase() ? null : title.toLowerCase());
-    }
-  };
-
-  return (
-    <li
-      className={`${activeNavItem === title.toLowerCase() ? styles.active : ''}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
-    >
-      <div className={styles.navItemTitleContainer}>
-        <Link className={styles.mainNavItem} href={href}>{title}</Link>
       </div>
-      {activeNavItem === title.toLowerCase() && (
-        <ul className={styles.subMenu}>
-          {subItems.map((item, index) => (
-            <li key={index} onClick={handleSubItemClick}>
-              <Link href={item.href}>
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
+    </header>
   );
 }

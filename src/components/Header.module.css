@@ -16,6 +16,10 @@
     height: 78px;
 }
 
+.navbar ul li a {
+    color: white;
+}
+
 .logoNavContainer {
     display: flex;
     align-items: center;
@@ -302,6 +306,10 @@
     }
 
     .navItemTitleContainer a {
+        color: black;
+    }
+
+    .navbar ul li a {
         color: black;
     }
 }
