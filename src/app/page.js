@@ -82,7 +82,7 @@ export default function Test(){
         <section id="contact-us" className={styles.contactForm}>
             <div className={styles.contactFormText}>
                 <h2>Ready to explore premium alternative investments?</h2>
-                <p>Whether you're just getting started or looking to expand your portfolio, our team is here to help.</p>
+                <p>Whether you&apos;re just getting started or looking to expand your portfolio, our team is here to help.</p>
                 <p>Reach out today to discover curated opportunities and bespoke solutions tailored to your goals.</p>
             </div>
             <div className={styles.form}>                
