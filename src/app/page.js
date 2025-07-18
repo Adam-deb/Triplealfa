@@ -1,46 +1,96 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/Header3";
+import ContactForm from "@/components/ContactForm";
+import Footer2 from "@/components/Footer2"
+
 import Link from "next/link";
+import Image from "next/image";
 
-
-export default function Home() {
-  return (
-    <>
-    <Header/>
-    <main>
-      <section className={styles.hero}>
-        <div className={styles.heroText}>
-          <h1>Triple Alfa</h1>
-          <p>Invest Beyond the Ordinary</p>
-          <p>Discover high-growth opportunities in exclusive alternative assets.</p>
+export default function Test(){
+    return(
+        <>
+        <div className={styles.page}>
+        <Header/>
+        <section className={styles.hero}>
+            <div className={styles.heroContainer}>
+                <div className={styles.heroTextContainer}>
+                    <h1>Invest Beyond the <span className={styles.titleAlternateText}>Ordinary</span></h1>
+                    <h2>Discover high-growth opportunities in exclusive alternative assets.</h2>
+                </div>
+                <div className={styles.heroCTA}>
+                    <Link href="#contact-us">
+                        Get in Touch
+                    </Link>
+                </div>
+            </div>
+        </section>
+        <section className={styles.proposition}>
+            <h2>Services we offer</h2>
+            <div className={styles.propositionContainer}>
+                <div className={styles.propositionCard}>
+                    <Image src="/marketplaceIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
+                    <h3 className={styles.propositionCardHeading}>Alternative Asset Marketplace</h3>
+                    <p className={styles.propositionCardDescription}>Discover unique investment opportunities beyond traditional markets. Our curated marketplace offers access to high-performing assets like whisky casks and media funds, vetted for quality, transparency, and growth potential.</p>
+                    {/* <Link href="/" className={styles.propositionCardCTA}>
+                        Explore Marketplace
+                    </Link> */}
+                </div>
+                <div className={styles.propositionCard}>
+                    <Image src="/bankIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
+                    <h3 className={styles.propositionCardHeading}>Open a foreign bank account</h3>
+                    <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant foreign bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
+                    {/* <Link href="/" className={styles.propositionCardCTA}>
+                        Explore Bank Opening
+                    </Link> */}
+                </div>
+                <div className={styles.propositionCard}>
+                    <Image src="/wealthmanagementIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
+                    <h3 className={styles.propositionCardHeading}>Wealth Management App</h3>
+                    <p className={styles.propositionCardDescription}>Monitor your alternative investments, track performance, and access exclusive insights—all in one place. Our intuitive app puts you in control of your portfolio, anytime and anywhere.</p>
+                    {/* <Link href="/" className={styles.propositionCardCTA}>
+                        Explore Wealth Management App
+                    </Link> */}
+                </div>
+                
+            </div>
+        </section>
+        <section className={styles.whyInvest}>
+            <div className={styles.whyInvestContainer}>
+                <div className={styles.whyInvestHeading}>
+                    <h2>Why invest Overseas?</h2>
+                </div>
+                <div className={styles.whyInvestTextContent}>
+                    <div className={styles.whyInvestContentBlock}>
+                        <h3>Hedge Against Currency Depreciation</h3>
+                        <p>Safeguard your wealth from local currency volatility by holding assets in stronger, more stable currencies.</p>
+                    </div>
+                    <div className={styles.whyInvestContentBlock}>
+                        <h3>Tax Efficiency</h3>
+                        <p>Benefit from zero capital gains tax on select alternative assets in certain jurisdictions, enhancing overall returns.</p>
+                    </div>
+                    <div className={styles.whyInvestContentBlock}>
+                        <h3>Global Diversification</h3>
+                        <p>Access global markets and reduce risk by spreading your investments across geographies, asset classes, and economies.</p>
+                    </div>
+                    <div className={styles.whyInvestContentBlock}>
+                        <h3>Achieve Life Goals</h3>
+                        <p>Fund long-term aspirations like international education or destination weddings, by building wealth in globally liquid assets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us" className={styles.contactForm}>
+            <div className={styles.contactFormText}>
+                <h2>Ready to explore premium alternative investments?</h2>
+                <p>Whether you're just getting started or looking to expand your portfolio, our team is here to help.</p>
+                <p>Reach out today to discover curated opportunities and bespoke solutions tailored to your goals.</p>
+            </div>
+            <div className={styles.form}>                
+                <ContactForm/>
+            </div>
+        </section>
+        <Footer2/>
         </div>
-      </section>
-      <section className={styles.whoWeAre}>
-        <h2>Who are we?</h2>
-        <p>At Triple Alfa, our mission is simple: to simplify investment opportunities and deliver exceptional value. We focus on innovative asset classes, including rare whisky casks and media funds, offering transparent and accessible financial products designed to help you achieve your investment goals.</p>
-        <p>Our leadership team combines decades of experience in finance, technology, and business development. With expertise in capital raising, portfolio management, and structured investments, we leverage our deep industry knowledge to identify and curate high-quality investment opportunities. </p>
-      </section>
-      <section className={styles.alternativeAssets}>
-        <h2>Alternative Assets</h2>
-        <div className={styles.assetsContainer}>
-          <div className={styles.asset}>
-            <Image src="/whiskeyCask.jpg" width={340} height={272}/>
-            <h3>Whisky Cask Investment</h3>
-            <p>Triple Alfa, in collaboration with whisky cask managers, offers unparalleled access to the finest whisky casks in Scotland. Our team of experts, led by industry leaders with decades of experience, carefully curates each cask for maximum growth potential.</p>
-            <Link href="/indian-investors">Find out more</Link>
-          </div>
-          <div className={styles.asset}>
-            <Image src="/media.jpeg" width={340} height={272}/>
-            <h3>Media Fund Investment</h3>
-            <p>Media fund investments provide a unique opportunity to tap into the explosive growth of the film, OTT, and digital media industries. Triple Alfa acts as an introducer to media funds, connecting you with their structured financing solutions for media projects, designed to offer secure, high-return investments.</p>
-            <Link href="/global-investors">Find out more</Link>
-          </div>
-        </div>
-      </section>
-    </main>
-    <Footer/>
-    </>
-  );
+        </>
+    )
 }

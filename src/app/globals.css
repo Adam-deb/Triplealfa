@@ -1,20 +1,27 @@
 @font-face {
-  font-family: 'NunitoLight';
-  src: url('/fonts/Nunito-Light.ttf') format('truetype');
+  font-family: 'RalewayLight';
+  src: url('/fonts/Raleway-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoBold';
-  src: url('/fonts/Nunito-Bold.ttf') format('truetype');
+  font-family: 'RalewayBold';
+  src: url('/fonts/Raleway-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoNormal';
-  src: url('/fonts/Nunito-Medium.ttf') format('truetype');
+  font-family: 'RalewayNormal';
+  src: url('/fonts/Raleway-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('/fonts/Raleway-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +32,7 @@
   font-size: 100%;
   vertical-align: baseline;
   box-sizing: border-box;
-  font-family: 'NunitoLight';
+  font-family: 'RalewayRegular';
 }
 
 html {
@@ -73,12 +80,12 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  font-family: 'NunitoLight';
+  font-family: 'RalewayLight';
 }
 
 ::placeholder {
   opacity: 1;
-  font-family: 'NunitoLight';
+  font-family: 'RalewayLight';
   color: #646464;
   font-size: 14px;
   letter-spacing: 1px;
@@ -102,7 +109,7 @@ input[type="submit"] {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'NunitoLight';
+  font-family: 'RalewayLight';
   position: relative;
   color: #333333;
 }
@@ -118,11 +125,17 @@ h6 {
 
 :root {
 --header-height: 78px; 
+--navyBlue: #2C3E50;
+--gold: #FFE09B; 
+--white: #FFFFFF;
+
 
 }
 
 .scroll-margin-top {
 scroll-margin-top: var(--header-height);
 }
+
+
 
 

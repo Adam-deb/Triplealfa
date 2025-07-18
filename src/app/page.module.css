@@ -1,151 +1,364 @@
-.hero{
-  background-image: url(/heroImage.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.page {
+  background-color: beige;
+}
+
+.hero {
+  background-color: #f5f5dc;
+}
+
+.heroContainer {
+  height: calc(100vh - 78px);
   width: 100%;
-  height: 700px;
-  display:flex;
-  justify-content: center;
+}
+
+.heroTextContainer {
+  padding: 50px 100px;
+}
+
+.heroTextContainer h1 {
+  font-size: 90px;
+  text-align: center;
+  font-weight: bold;
+  color: #424242;
+  line-height: 95px;
+}
+
+.titleAlternateText {
+  color: #750FFF;
+}
+
+.heroTextContainer h2 {
+  margin-top: 50px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: #424242;
+}
+
+.heroCTA {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.heroText{
-  color:white;
-  margin-left: 50px;
-  text-align: left;
-  width:500px;
-  margin-right: auto;
+.heroCTA a {
+  background-color: #ff0f5b;
+  border-radius: 30px;
+  padding: 20px 20px;
+  color: white;
+  font-weight: bold;
 }
 
-.heroText h1{
+.proposition {
+  background-color: white;
+  width: 100%;
+}
+
+.proposition h2 {
+  color: #424242;
+  font-size: 52px;
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.propositionContainer {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.propositionCard {
+  width: 32%;
+  height: 430px;
+  background-color: beige;
+  border-radius: 30px;
+  padding: 40px;
+  margin: 25px;
+}
+
+.propositionCardHeading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.propositionCardDescription {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.propositionCard a {
+  background-color: #ff0f5b;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.whyInvest {
+  background-color: white;
+  padding: 25px;
+}
+
+.whyInvestContainer {
+  background-color: #750FFF;
+  border-radius: 30px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.whyInvestHeading {
+  display: flex;
+  width: 50%;
+  padding-right: 50px;
+}
+
+.whyInvestHeading h2 {
+  font-size: 52px;
+  color: white;
+}
+
+.whyInvestTextContent {
+  width: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.whyInvestTextContent h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #750FFF;
+}
+
+.whyInvestTextContent ul li {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.whyInvestContentBlock {
+  background-color: white;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* ----- CONTACT FORM STYLING ----- */
+
+.contactForm {
+  background-color: white;
+  padding: 60px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contactFormText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contactForm h2 {
   font-size: 42px;
+  color: #424242;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.heroText p{
-  font-size: 28px;
-  margin-top: 15px;
+.contactForm p {
+  font-size: 20px;
+  color: #424242;
+  margin-bottom: 10px;
+  max-width: 800px;
 }
 
-.whoWeAre{
-  padding:0 100px;
-  margin: 50px auto;
-  max-width:1000px
-}
-
-.whoWeAre h2{
-  font-size: 32px;
-  text-align: center;
-}
-
-.whoWeAre p{
-  text-align: center;
-  font-size: 22px;
-  line-height: 1.5;
-  margin-top: 30px;
-}
-
-.alternativeAssets {
-  margin-top: 50px;
-  background-color: rgba(240, 240, 240, 0.432);
-}
-
-.alternativeAssets h2 {
-  font-size: 32px;
-  text-align: center;
-  padding-top: 50px;
-}
-
-.assetsContainer {
-  display: flex;
-  padding: 50px 100px;
-  justify-content: space-around;
-  flex-wrap: wrap; /* Added to allow wrapping */
-}
-
-.asset {
-  width: 400px;
-  height: auto; /* Changed to auto for responsive height */
+.form {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto 0 auto; 
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 30px; /* Added margin for spacing between cards */
+  align-items: center;
 }
 
-.asset img {
-  border-radius: 10px;
-  width: 100%; /* Set to 100% for responsive images */
-  height: auto; /* Adjust height based on image aspect ratio */
-}
 
-.asset h3 {
-  font-size: 24px;
-  margin: 10px 0;
-}
+/* -------- RESPONSIVE STYLES -------- */
 
-.assets p {
-  font-size: 14px;
-}
-
-.asset a {
-  margin-top: 10px;
-  color: blue;
-}
-
-.asset a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width:900px){
-  .whoWeAre{
-    padding: 0 50px
-  }
-  .assetsContainer {
-    padding: 50px 50px; 
-    flex-direction: column; 
-    align-items: center; 
+@media screen and (max-width: 1024px) {
+  .heroTextContainer {
+    padding: 30px 40px;
   }
 
-  .asset {
-    width: 90%; 
-    max-width: 500px; 
+  .heroTextContainer h1 {
+    font-size: 60px;
+    line-height: 65px;
   }
-}
 
-@media (max-width:800px){
-  .heroText{
-    text-align: center;
+  .heroTextContainer h2 {
+    font-size: 20px;
+  }
+
+  .proposition h2{
+    font-size: 40px;
+  }
+  
+  .propositionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .propositionCard {
+    width: 80%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .whyInvestContainer {
+    flex-direction: column;
+  }
+
+  .whyInvestHeading,
+  .whyInvestTextContent {
+    width: 100%;
+    padding: 0;
     margin: 0;
-    padding: 0 20px;
+  }
+
+  .whyInvestHeading {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .whyInvestHeading h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .contactForm {
+    padding: 50px 60px;
+  }
+
+  .contactForm h2 {
+    font-size: 36px;
+  }
+
+  .contactForm p {
+    font-size: 18px;
   }
 }
 
-@media (max-width:650px){
-  .hero{
-    background-image: url(/heroImageResize.png);
+@media screen and (max-width: 768px) {
+  .heroTextContainer h1 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .heroTextContainer h2 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .heroCTA a {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .propositionCardHeading {
+    font-size: 26px;
+  }
+
+  .propositionCardDescription {
+    font-size: 18px;
+  }
+
+  .whyInvestTextContent h3 {
+    font-size: 22px;
+  }
+
+  .whyInvestTextContent ul li {
+    font-size: 18px;
+  }
+
+  .contactForm {
+    padding: 40px 30px;
+  }
+
+  .contactForm h2 {
+    font-size: 28px;
+  }
+
+  .contactForm p {
+    font-size: 16px;
   }
 }
 
-@media (max-width:565px){
-  .whoWeAre{
-    padding: 0 10px
-  }
-  .assetsContainer {
-    padding: 30px 20px; 
+@media screen and (max-width: 480px) {
+  .heroTextContainer {
+    padding: 20px;
   }
 
-  .asset h3 {
-    font-size: 20px; 
+  .heroTextContainer h1 {
+    font-size: 32px;
+    line-height: 38px;
   }
 
-  .assets p {
-    font-size: 12px; 
+  .heroTextContainer h2 {
+    font-size: 16px;
+  }
+
+  .heroCTA a {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .propositionCard {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .propositionCardHeading {
+    font-size: 22px;
+  }
+
+  .propositionCardDescription {
+    font-size: 16px;
+  }
+
+  .whyInvestHeading h2 {
+    font-size: 32px;
+  }
+
+  .whyInvestTextContent h3 {
+    font-size: 20px;
+  }
+
+  .whyInvestContentBlock {
+    padding: 15px;
+  }
+
+  .contactForm {
+    padding: 30px 20px;
+  }
+
+  .contactForm h2 {
+    font-size: 24px;
+  }
+
+  .contactForm p {
+    font-size: 14px;
   }
 }
-
-
-
