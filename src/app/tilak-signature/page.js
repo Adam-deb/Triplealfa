@@ -16,7 +16,7 @@ export default function Signature1() {
                 <tr>
                   <td width="100" style={{ paddingRight: '10px', verticalAlign: 'middle' }}>
                     <img
-                      src="/email-signitures/headshots/Fahad.png"
+                      src="/email-signitures/headshots/Tilak.png"
                       alt="headshot"
                       width="100"
                       height="100"
@@ -29,10 +29,10 @@ export default function Signature1() {
                         <tr>
                           <td style={{ textAlign: 'left', verticalAlign: 'middle' }}>
                             <p style={{ margin: '0', fontSize: '20px', fontWeight: 'bold', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-                              Fahad Haris
+                              Tilak Naik
                             </p>
                             <p style={{ margin: '2px 0 0 0', fontSize: '14px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-                              Overseas Investment Manager | Triple Alfa
+                              Client Services Director | Triple Alfa
                             </p>
                           </td>
                           <td style={{ textAlign: 'right', verticalAlign: 'middle' }}>
@@ -48,11 +48,11 @@ export default function Signature1() {
                       </tbody>
                     </table>
                     <p style={{ margin: '5px 0 0', fontSize: '14px', color: '#555' }}>
-                      <a href="tel:+447860121271" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
-                        <strong>M:</strong> +44 7468 543618
+                      <a href="tel:+447598693747" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
+                        <strong>M:</strong>  +44 75986 93747
                       </a><br />
                       <a href="mailto:adam@triplealfa.com" style={{ color: 'black', textDecoration: 'none', fontFamily: 'Arial, sans-serif' }}>
-                        <strong>E:</strong> fahad.haris@triplealfa.com
+                        <strong>E:</strong> tilak@triplealfa.com
                       </a>
                     </p>
                     <p style={{ margin: '0', fontSize: '14px', color: '#555' }}>
