@@ -32,7 +32,7 @@ export default function Signature1() {
                               Manoj Karkhanis
                             </p>
                             <p style={{ margin: '2px 0 0 0', fontSize: '14px', color: '#333', fontFamily: 'Arial, sans-serif' }}>
-                              Triple Alfa
+                             Board Member | Triple Alfa
                             </p>
                           </td>
                           <td style={{ textAlign: 'right', verticalAlign: 'middle' }}>
