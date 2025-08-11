@@ -1,0 +1,111 @@
+.teamContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.teamCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.teamCard {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+}
+
+/* FRONT */
+.teamFront, .teamBack {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.teamFront {
+  background: #fff;
+  z-index: 2;
+}
+
+.teamPhoto img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teamName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.teamRole {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* BACK */
+.teamBack {
+  background: #f9f9f9;
+  z-index: 1;
+  opacity: 0;
+  overflow-y: auto; /* Enable scrolling if content is too long */
+  padding: 1rem;
+}
+
+.teamBack::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teamBack::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.teamBack > div {
+  max-height: 100%;
+}
+
+.teamDescription {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+/* Hover effect - hide front, show back */
+.teamCard:hover .teamFront {
+  opacity: 0;
+}
+
+.teamCard:hover .teamBack {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .teamCard {
+    height: auto;
+    min-height: 350px;
+  }
+}

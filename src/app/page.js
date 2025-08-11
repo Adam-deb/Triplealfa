@@ -1,12 +1,27 @@
+"use client"
+
 import styles from "./page.module.css";
 import Header from "@/components/Header3";
+import DownloadModal from "@/components/DownloadModal";
+import CustomCarousel from "@/components/ContentCarousel";
+import Team from "@/components/Team";
 import ContactForm from "@/components/ContactForm";
 import Footer2 from "@/components/Footer2"
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+
 
 export default function Test(){
+    const [modalOpen, setModalOpen] = useState(false);
+    const [downloadUrl, setDownloadUrl] = useState("");
+
+    const handleClick = (url) => {
+        setDownloadUrl(url);
+        setModalOpen(true);
+    };
+
     return(
         <>
         <div className={styles.page}>
@@ -15,49 +30,52 @@ export default function Test(){
             <div className={styles.heroContainer}>
                 <div className={styles.heroTextContainer}>
                     <h1>Invest Beyond the <span className={styles.titleAlternateText}>Ordinary</span></h1>
-                    <h2>Discover high-growth opportunities in exclusive alternative assets.</h2>
                 </div>
-                <div className={styles.heroCTA}>
-                    <Link href="#contact-us">
-                        Get in Touch
-                    </Link>
-                </div>
-            </div>
-        </section>
-        <section className={styles.proposition}>
-            <h2>Services we offer</h2>
-            <div className={styles.propositionContainer}>
+                <div className={styles.propositionContainer}>
                 <div className={styles.propositionCard}>
-                    <Image src="/marketplaceIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
-                    <h3 className={styles.propositionCardHeading}>Alternative Asset Marketplace</h3>
-                    <p className={styles.propositionCardDescription}>Discover unique investment opportunities beyond traditional markets. Our curated marketplace offers access to high-performing assets like whisky casks and media funds, vetted for quality, transparency, and growth potential.</p>
-                    {/* <Link href="/" className={styles.propositionCardCTA}>
+                    <Image src="/speysideLogo.png" height={60} width={150} className={styles.propositionCardIcon}/>
+                    <h3 className={styles.propositionCardHeading}>Scotch Whisky Asset Marketplace</h3>
+                    <p className={styles.propositionCardDescription}>Discover unique investment opportunities beyond traditional markets. A curated marketplace offers access to high-performing assets.</p>
+                    <Link href="https://portal.speysidecapital.com/" target="blank" className={styles.propositionCardCTA}>
                         Explore Marketplace
-                    </Link> */}
+                    </Link>
                 </div>
                 <div className={styles.propositionCard}>
                     <Image src="/bankIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
-                    <h3 className={styles.propositionCardHeading}>Open a foreign bank account</h3>
-                    <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant foreign bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
+                    <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
+                    <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant UK bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
                     {/* <Link href="/" className={styles.propositionCardCTA}>
                         Explore Bank Opening
                     </Link> */}
                 </div>
                 <div className={styles.propositionCard}>
-                    <Image src="/wealthmanagementIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
+                    <Image src="/elisyanLogo.png" height={60} width={60} className={styles.propositionCardIcon}/>
                     <h3 className={styles.propositionCardHeading}>Wealth Management App</h3>
-                    <p className={styles.propositionCardDescription}>Monitor your alternative investments, track performance, and access exclusive insights—all in one place. Our intuitive app puts you in control of your portfolio, anytime and anywhere.</p>
-                    {/* <Link href="/" className={styles.propositionCardCTA}>
-                        Explore Wealth Management App
-                    </Link> */}
+                    <p className={styles.propositionCardDescription}>Monitor your investments, track performance, and access exclusive insights all in one place. An app which puts you in control of your portfolio, anytime and anywhere.</p>
+                        <button className={styles.storeButton} onClick={() => handleClick("https://apps.apple.com/us/app/my-private-office/id6504410156")}>
+                            <Image height={40} width={135} src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
+                        </button>
+
+                        <button className={styles.storeButton} onClick={() => handleClick("https://play.google.com/store/apps/details?id=com.elisyanwealth")}>
+                            <Image height={40} width={135} src="/GetItOnGooglePlay_Badge_Web_color_English.png" />
+                        </button>
+
+                        <DownloadModal
+                            isOpen={modalOpen}
+                            onClose={() => setModalOpen(false)}
+                            downloadUrl={downloadUrl}
+                        />
                 </div>
-                
+                </div>
             </div>
         </section>
+        {/* <section className={styles.propositionCarousel}>
+            <CustomCarousel/>
+        </section> */}
         <section className={styles.whyInvest}>
             <div className={styles.whyInvestContainer}>
                 <div className={styles.whyInvestHeading}>
-                    <h2>Why invest Overseas?</h2>
+                    <h2>Why invest in the UK?</h2>
                 </div>
                 <div className={styles.whyInvestTextContent}>
                     <div className={styles.whyInvestContentBlock}>
@@ -66,7 +84,7 @@ export default function Test(){
                     </div>
                     <div className={styles.whyInvestContentBlock}>
                         <h3>Tax Efficiency</h3>
-                        <p>Benefit from zero capital gains tax on select alternative assets in certain jurisdictions, enhancing overall returns.</p>
+                        <p>Benefit from zero capital gains tax on Whisky Casks in the UK, enhancing overall returns.</p>
                     </div>
                     <div className={styles.whyInvestContentBlock}>
                         <h3>Global Diversification</h3>
@@ -78,6 +96,10 @@ export default function Test(){
                     </div>
                 </div>
             </div>
+        </section>
+        <section className={styles.TeamSection}>
+            <h2>Meet Our Team</h2>
+            <Team/>
         </section>
         <section id="contact-us" className={styles.contactForm}>
             <div className={styles.contactFormText}>
