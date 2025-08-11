@@ -41,7 +41,7 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl }) {
     <div style={styles.overlay}>
       <div style={styles.modal}>
         <h2>Get Access to the App</h2>
-        <p>Enter your email and we'll send you a QR code that will give you access to the app</p>
+        <p>Enter your email and we&apos;ll send you a QR code that will give you access to the app</p>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
