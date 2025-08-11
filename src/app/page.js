@@ -2,7 +2,8 @@
 
 import styles from "./page.module.css";
 import Header from "@/components/Header3";
-import DownloadModal from "@/components/DownloadModal";
+import ElisyanDownloadModal from "@/components/ElisyanDownloadModal";
+import GembaDownloadModal from "@/components/GembaDownloadModal";
 import CustomCarousel from "@/components/ContentCarousel";
 import Team from "@/components/Team";
 import ContactForm from "@/components/ContactForm";
@@ -16,11 +17,19 @@ import { useState } from "react";
 export default function Test(){
     const [modalOpen, setModalOpen] = useState(false);
     const [downloadUrl, setDownloadUrl] = useState("");
+    const [bankModalOpen, setBankModalOpen] = useState(false);
 
-    const handleClick = (url) => {
+    const handleElisyanClick = (url) => {
         setDownloadUrl(url);
         setModalOpen(true);
     };
+
+    const handleGembaClick = (url) => {
+        setDownloadUrl(url);
+        setBankModalOpen(true);
+    };
+
+    
 
     return(
         <>
@@ -44,23 +53,35 @@ export default function Test(){
                     <Image src="/bankIcon.png" height={60} width={60} className={styles.propositionCardIcon}/>
                     <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
                     <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant UK bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
-                    {/* <Link href="/" className={styles.propositionCardCTA}>
-                        Explore Bank Opening
-                    </Link> */}
+                    <div className={styles.storeButtonsContainer}>
+                        <button className={styles.storeButton} onClick={() => handleGembaClick("https://apps.apple.com/gb/app/gemba/id1551467822")}>
+                            <Image height={40} width={135} src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
+                        </button>
+                        <button className={styles.storeButton} onClick={() => handleGembaClick("https://play.google.com/store/apps/details?id=com.gemba.bank")}>
+                            <Image height={40} width={135} src="/GetItOnGooglePlay_Badge_Web_color_English.png" />
+                        </button>
+                    </div>
+                        <GembaDownloadModal
+                            isOpen={bankModalOpen}
+                            onClose={() => setBankModalOpen(false)}
+                            downloadUrl={downloadUrl}
+                        />
+                 
                 </div>
                 <div className={styles.propositionCard}>
                     <Image src="/elisyanLogo.png" height={60} width={60} className={styles.propositionCardIcon}/>
                     <h3 className={styles.propositionCardHeading}>Wealth Management App</h3>
                     <p className={styles.propositionCardDescription}>Monitor your investments, track performance, and access exclusive insights all in one place. An app which puts you in control of your portfolio, anytime and anywhere.</p>
-                        <button className={styles.storeButton} onClick={() => handleClick("https://apps.apple.com/us/app/my-private-office/id6504410156")}>
+                    <div className={styles.storeButtonsContainer}>   
+                        <button className={styles.storeButton} onClick={() => handleElisyanClick("https://apps.apple.com/us/app/my-private-office/id6504410156")}>
                             <Image height={40} width={135} src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
                         </button>
-
-                        <button className={styles.storeButton} onClick={() => handleClick("https://play.google.com/store/apps/details?id=com.elisyanwealth")}>
+                        <button className={styles.storeButton} onClick={() => handleElisyanClick("https://play.google.com/store/apps/details?id=com.elisyanwealth")}>
                             <Image height={40} width={135} src="/GetItOnGooglePlay_Badge_Web_color_English.png" />
                         </button>
+                    </div>
 
-                        <DownloadModal
+                        <ElisyanDownloadModal
                             isOpen={modalOpen}
                             onClose={() => setModalOpen(false)}
                             downloadUrl={downloadUrl}

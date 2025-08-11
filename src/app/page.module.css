@@ -74,7 +74,9 @@
   border-radius: 30px;
   padding: 40px;
   margin: 25px;
-  height: 400px
+  height: 400px;
+  display: flex;           
+  flex-direction: column; 
 }
 
 .propositionCardHeading {
@@ -86,7 +88,6 @@
 .propositionCardDescription {
   margin-top: 10px;
   font-size: 16px;
-  margin-bottom: 25px;
 }
 
 .propositionCardCTA {
@@ -98,6 +99,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: auto;    
+}
+
+.storeButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;        
+  gap: 10px;               
 }
 
 .storeButton {
@@ -236,6 +245,7 @@
     font-size: 40px;
   }
   
+  
   .propositionContainer {
     flex-direction: column;
     align-items: center;
@@ -245,6 +255,10 @@
     width: 80%;
     height: auto;
     margin: 20px 0;
+  }
+
+  .propositionCardDescription {
+    margin-bottom: 25px;
   }
 
   .whyInvestContainer {

@@ -11,8 +11,8 @@ export async function POST(req) {
     // Only notify the company — no email to the user
     await sendEmail(
       ["adam@triplealfa.com", "info@triplealfa.com"],
-      "New App Download Request",
-      `A user clicked the download link and entered their email:\n\n${email}`
+      "Elisyan Wealth App QR code request",
+      `A user clicked the Elysian wealth app download link and entered their email:\n\n${email}`
     );
 
     return new Response(JSON.stringify({ message: "Company notified" }), { status: 200 });

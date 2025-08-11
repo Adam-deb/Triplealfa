@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function DownloadModal({ isOpen, onClose, downloadUrl }) {
+export default function GembaDownloadModal({ isOpen, onClose, downloadUrl }) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -14,7 +14,7 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl }) {
     setError("");
 
     try {
-      const res = await fetch("/api/sendAppAccess", {
+      const res = await fetch("/api/sendBankOpeningRequest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -41,7 +41,7 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl }) {
     <div style={styles.overlay}>
       <div style={styles.modal}>
         <h2>Get Access to the App</h2>
-        <p>Enter your email and we&apos;ll send you a QR code that will give you access to the app</p>
+        <p>Enter your email and we&apos;ll send you an invite code that will give you access to the app</p>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
