@@ -16,7 +16,7 @@ export default function Signature1() {
                 <tr>
                   <td width="100" style={{ paddingRight: '10px', verticalAlign: 'middle' }}>
                     <img
-                      src="/email-signitures/headshots/Adam.png"
+                      src="/email-signatures/headshots/Adam.png"
                       alt="headshot"
                       width="100"
                       height="100"
