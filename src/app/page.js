@@ -50,13 +50,19 @@ export default function Test(){
                     </Link>
                 </div>
                 <div className={styles.propositionCard}>
-                    <Image src="/gembaLogo.png" height={60} width={60} className={styles.propositionCardIcon}/>
+                    <Image src="/tripleAlfaLogoOnly.png" height={60} width={60} className={styles.propositionCardIcon}/>
                     <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
-                    <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant UK bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
+                    <p className={styles.propositionCardDescription}>
+                        Simplify your international investments with a fully compliant UK bank account.  
+                        Choose between a personal or corporate account, and<span className={styles.boldFont}> enter the code: QAX181796NEW</span> when prompted.
+                    </p>
                     <div className={styles.storeButtonsContainer}>
-                        <button className={styles.propositionCardCTA} onClick={() => handleGembaClick("https://banking.triplealfa.com/")}>
-                            Explore Marketplace
-                        </button>
+                        <Link className={styles.propositionCardCTA} href="https://banking.triplealfa.com/onboarding/personal" target="_blank">
+                            Personal Account
+                        </Link>
+                        <Link className={styles.propositionCardCTA} href="https://banking.triplealfa.com/onboarding/corporate" target="_blank">
+                            Corporate Account
+                        </Link>
                     </div>
                         <GembaDownloadModal
                             isOpen={bankModalOpen}
