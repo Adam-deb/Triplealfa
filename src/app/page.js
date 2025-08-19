@@ -54,11 +54,8 @@ export default function Test(){
                     <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
                     <p className={styles.propositionCardDescription}>Simplify international investing by opening a fully compliant UK bank account. We guide you through the process, ensuring seamless onboarding and access to global financial services.</p>
                     <div className={styles.storeButtonsContainer}>
-                        <button className={styles.storeButton} onClick={() => handleGembaClick("https://apps.apple.com/gb/app/gemba/id1551467822")}>
-                            <Image height={40} width={135} src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
-                        </button>
-                        <button className={styles.storeButton} onClick={() => handleGembaClick("https://play.google.com/store/apps/details?id=com.gemba.bank")}>
-                            <Image height={40} width={135} src="/GetItOnGooglePlay_Badge_Web_color_English.png" />
+                        <button className={styles.propositionCardCTA} onClick={() => handleGembaClick("https://banking.triplealfa.com/")}>
+                            Explore Marketplace
                         </button>
                     </div>
                         <GembaDownloadModal

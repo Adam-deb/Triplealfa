@@ -40,8 +40,8 @@ export default function GembaDownloadModal({ isOpen, onClose, downloadUrl }) {
   return (
     <div style={styles.overlay}>
       <div style={styles.modal}>
-        <h2>Get Access to the App</h2>
-        <p>Enter your email and we&apos;ll send you an invite code that will give you access to the app</p>
+        <h2>Open your Bank Account</h2>
+        <p>Please enter submit your email address so we can send you an invite code to create your account.</p>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
