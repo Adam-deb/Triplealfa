@@ -78,7 +78,7 @@
   border-radius: 30px;
   padding: 40px;
   margin: 25px;
-  height: 400px;
+  height: 430px;
   display: flex;           
   flex-direction: column; 
 }
@@ -97,21 +97,29 @@
 .propositionCardCTA {
   background-color: #ff0f5b;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   color: white;
   font-weight: bold;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: auto;    
   border: none;
+  flex: 0 0 auto; 
 }
 
 .storeButtonsContainer {
   display: flex;
-  flex-direction: row;
-  margin-top: auto;        
-  gap: 10px;               
+  gap: 10px;
+  margin-top: auto;
+  align-items: stretch;                 
+}
+
+.storeButtonsContainer .propositionCardCTA {
+  flex: 1 1 0;   /* equal width, can stretch vertically */
+  width: auto;   /* don’t force 100% */
+  margin-top: 0;   
 }
 
 .storeButton {
@@ -231,6 +239,12 @@
 
 
 /* -------- RESPONSIVE STYLES -------- */
+@media screen and (max-width: 1435px) {
+  .propositionCardCTA {
+    font-size: 16px;
+    text-align: center;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .heroTextContainer {
