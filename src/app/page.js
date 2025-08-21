@@ -54,7 +54,7 @@ export default function Test(){
                     <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
                     <p className={styles.propositionCardDescription}>
                         Simplify your international investments with a fully compliant UK bank account.  
-                        Choose between a personal or corporate account, and<span className={styles.boldFont}> enter the invite code: QAX181796NEW</span> when prompted.
+                        Choose between a personal or corporate account here.
                     </p>
                     <div className={styles.storeButtonsContainer}>
                         <Link className={styles.propositionCardCTA} href="https://banking.triplealfa.com/onboarding/personal" target="_blank">
