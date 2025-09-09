@@ -53,15 +53,11 @@ export default function Test(){
                     <Image src="/tripleAlfaLogoOnly.png" height={60} width={60} className={styles.propositionCardIcon}/>
                     <h3 className={styles.propositionCardHeading}>Open a UK bank account</h3>
                     <p className={styles.propositionCardDescription}>
-                        Simplify your international investments with a fully compliant UK bank account.  
-                        Choose between a personal or corporate account here.
+                        Simplify your international investments with a fully compliant UK bank account.
                     </p>
                     <div className={styles.storeButtonsContainer}>
                         <Link className={styles.propositionCardCTA} href="https://banking.triplealfa.com/onboarding/personal" target="_blank">
-                            Personal Account
-                        </Link>
-                        <Link className={styles.propositionCardCTA} href="https://banking.triplealfa.com/onboarding/corporate" target="_blank">
-                            Corporate Account
+                            Open UK Bank Account
                         </Link>
                     </div>
                         <GembaDownloadModal
